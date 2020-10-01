@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/pages/Home";
-import Home from "./pages/NewCar";
-import Detail from "./pages/Detail";
-import NoMatch from "./pages/NoMatch";
+import CarEnginges from "./components/pages/CarEnginges";
+import CarBody from "./components/pages/CarBody";
+import CarLights from "./components/pages/CarLights";
 import Nav from "./components/Nav";
 import { StoreProvider } from "./utils/GlobalState";
 import FavoritesList from "./pages/FavoritesList";
