@@ -6,6 +6,7 @@ import Home from "./components/pages/Home";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import UserContext from "./context/UserContext";
+import Footer from "./components/Footer/Footer";
 
 import "./App.css";
 
@@ -55,6 +56,7 @@ export default function App() {
             </Switch>
           </div>
         </UserContext.Provider>
+        <Footer />
       </BrowserRouter>
     </>
   );

@@ -18,9 +18,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/cardoc", {
   useFindAndModify: false
 });
 
-
 // set up routes
 app.use("/users", require("./routes/userRouter"));
-
 
 app.listen(PORT, () => console.log(`The server has started on http://localhost:${PORT}`));
