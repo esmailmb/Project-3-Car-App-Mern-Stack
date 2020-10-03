@@ -5,11 +5,13 @@ import Hero from "../Hero/Hero";
 import porsche from "../assets/porsche.jpg";
 import logo from "../assets/cardoc.png";
 
+
 export default function Home() {
   const { userData } = useContext(UserContext);
 
   return (
     <div className="page">
+
       <Hero backgroundImage={porsche}>
         <img className="cardoclogo" src={logo} alt={"logo"} style={{ height: 140, flex: 1, width: undefined, padding: 0 }} />
         <h2 className="hometitle">For your auto parts and modifications needs.</h2>

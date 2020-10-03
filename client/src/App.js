@@ -8,6 +8,7 @@ import Register from "./components/auth/Register";
 import UserContext from "./context/UserContext";
 import Footer from "./components/Footer/Footer";
 
+
 import "./App.css";
 
 export default function App() {
@@ -57,6 +58,7 @@ export default function App() {
           </div>
         </UserContext.Provider>
         <Footer />
+
       </BrowserRouter>
     </>
   );
