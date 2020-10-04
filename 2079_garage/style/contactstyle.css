@@ -1,6 +1,6 @@
 git@font-face{
 	font-family: "OpenSans-Light";
-	src url(../source/fonts/OpenSans-Light.ttf) format("truetype")
+	src: url(../source/fonts/OpenSans-Light.ttf) format("truetype");
 }
 .newslettercontent{
     margin-bottom: 0;
