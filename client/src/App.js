@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Axios from "axios";
 import Header from "./components/layout/Header";
-import Home from "./components/pages/Home";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import UserContext from "./context/UserContext";
 import Footer from "./components/Footer/Footer";
+import Home from "./pages/Home";
 
 import "./App.css";
 
@@ -51,8 +51,8 @@ export default function App() {
           <div className="container">
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route path="/login" component={Login} />
-              <Route path="/register" component={Register} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/register" component={Register} />
             </Switch>
           </div>
         </UserContext.Provider>

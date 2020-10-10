@@ -1,12 +1,11 @@
 .hero {
-    height: 670px;
+    height: 900px;
     width: 100%;
     background-size: cover;
     background-position: center;
     position: relative;
   }
   
-  /* This has something to do with the hero opacity */
   .hero::after {
     content: "";
     display: block;
