@@ -1,0 +1,54 @@
+.hero {
+    height: 900px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .hero::after {
+    content: "";
+    display: block;
+    opacity: .3;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+  }
+  
+  .hero * {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero h1, .hero h2 {
+    color: white;
+    
+  }
+  
+  /* This is the h1 copy on the hero image */
+  .hero h1 {
+    font-size: 80px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    padding-top: -10px;
+    margin-top: -20;
+    font-family: "HCo Verlag","CenturyGothic",AppleGothic,Gill Sans,Gill Sans MT,sans-serif;
+  }
+  
+  /* This is the h2 copy on the hero image */
+  .hero h2 {
+    letter-spacing: 2px;
+    font-weight: 100;
+    padding-top: 0;
+    font-family: "HCo Verlag","CenturyGothic",AppleGothic,Gill Sans,Gill Sans MT,sans-serif;
+  }
+  
+  /* this is the copy area on home page */
+  p {
+    font-size: 12pt;
+    font-family: "HCo Verlag","CenturyGothic",AppleGothic,Gill Sans,Gill Sans MT,sans-serif;
+    letter-spacing: 0px;
+  }
