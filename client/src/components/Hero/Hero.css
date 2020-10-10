@@ -6,7 +6,6 @@
     position: relative;
   }
   
-  /* This has something to do with the hero opacity */
   .hero::after {
     content: "";
     display: block;

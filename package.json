@@ -11,7 +11,6 @@
     "connect-mongo": "^3.2.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "if-env": "^1.0.4",
@@ -24,7 +23,10 @@
   },
   "devDependencies": {},
   "scripts": {
+<<<<<<< HEAD
+=======
 
+>>>>>>> 1fdf718342e5766a7b82f2cb3fb21bd952964ab9
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
@@ -32,6 +34,10 @@
     "seed": "node scripts/seedDB.js",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
+<<<<<<< HEAD
+    "heroku-postbuild": "npm run build"
+=======
+>>>>>>> 1fdf718342e5766a7b82f2cb3fb21bd952964ab9
   },
   "repository": {
     "type": "git",
