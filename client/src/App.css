@@ -123,6 +123,15 @@ body {
   list-style: disc;
   cursor: pointer;
 }
+.form input[type="submit"] {
+  padding: 0.3rem 0.5rem;
+  border: 1px solid #6aa051;
+  border-radius: 8px;
+  background-color: #c8ecb7;
+  font-size: 1.1rem;
+}
+
+/* todo list */
 
 .todo-list li:hover {
   text-decoration: line-through;
