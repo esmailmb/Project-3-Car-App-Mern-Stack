@@ -73,14 +73,14 @@ export default function Home() {
             <Container>
               <Row>
                 <Col size="xs-9 sm-10">
-                  <Input
+                  <Input style={{ height: 50, width: "80%", borderColor: 'grey', borderWidth: 1, borderRadius: 10,  marginBottom: 10, fontSize: 15 }}
                     onChange={handleInputChange}
                     name="search"
-                    placeholder="Search car VIN..."
+                    placeholder="  Search car VIN (example:bmw) "
                   />
                 </Col>
-                <Col size="xs-3 sm-2">
-                  <Button
+                <Col size="xs-7 sm-9">
+                  <Button style={{ fontsize: 20, padding:  60, borderradius: 5, borderWidth: 1, margin: 10, }}
                     disabled={!(formObject.search)}
                     onClick={handleFormSubmit}
                   >
