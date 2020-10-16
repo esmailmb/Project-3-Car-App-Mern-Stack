@@ -23,10 +23,6 @@
   },
   "devDependencies": {},
   "scripts": {
-<<<<<<< HEAD
-=======
-
->>>>>>> 1fdf718342e5766a7b82f2cb3fb21bd952964ab9
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
@@ -34,10 +30,7 @@
     "seed": "node scripts/seedDB.js",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-<<<<<<< HEAD
     "heroku-postbuild": "npm run build"
-=======
->>>>>>> 1fdf718342e5766a7b82f2cb3fb21bd952964ab9
   },
   "repository": {
     "type": "git",

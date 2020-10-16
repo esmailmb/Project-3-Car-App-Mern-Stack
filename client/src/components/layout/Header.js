@@ -12,6 +12,7 @@ export default function Header() {
       <Link to="/">
         {/* <img src={logo} alt='car doc pic'/> */}
         <h1 className="title">CarDoc - Auto parts & modification!</h1>
+
       </Link>
       <AuthOptions />
     </div>

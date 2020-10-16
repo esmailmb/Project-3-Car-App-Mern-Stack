@@ -17,10 +17,6 @@ export default function Home() {
   const [vin, setVin] = useState([]);
   const [formObject, setFormObject] = useState({});
 
-  // useEffect(() => {
-  //   searchVin()
-  // }, [])
-
   // function searchVin() {
   //   API.searchVin()
   //     .then(res => setVin(res.data.Results[0]))
@@ -36,6 +32,7 @@ export default function Home() {
   // Then reload books from the database
   function handleFormSubmit(event) {
     event.preventDefault();
+    console.log("click VIN search")
     if (formObject.search) {
       API.searchVin(formObject.search)
         .then(res => {
@@ -59,63 +56,72 @@ export default function Home() {
   }
   return (
     <div className="page">
+      {userData.user ? (
+        <div className="userCheck">
+          <h1>Welcome {userData.user.displayName} <Clock /> </h1>
+        </div>
+      ) : (
+          <>
+            <h3>Welcome to CarDoc! </h3>
+            {/* Please <Link to="/login"> Log in</Link></h3> */}
+          </>
+        )}
+
+      <Row>
+        <Col size="md-12">
+          <form>
+            <Container>
+              <Row>
+                <Col size="xs-9 sm-10">
+                  <Input
+                    onChange={handleInputChange}
+                    name="search"
+                    placeholder="Search car VIN..."
+                  />
+                </Col>
+                <Col size="xs-3 sm-2">
+                  <Button
+                    disabled={!(formObject.search)}
+                    onClick={handleFormSubmit}
+                  >
+                    VIN Search
+                  </Button>
+                </Col>
+              </Row>
+            </Container>
+          </form>
+        </Col>
+      </Row>
+
+      <Row>
+        <Col size="xs-12 sm-12">
+          {vin.length ? (
+            <div className="vinReturn">
+              <h2>Car VIN Details </h2>
+              <div> VIN: {vin[0].VIN} </div>
+              <div> Make: {vin[0].Make} </div>
+              <div> Model: {vin[0].Model} </div>
+              <div> Model Year: {vin[0].ModelYear} </div>
+              <div> Engine HP: {vin[0].EngineHP} </div>
+              <div> Engine Cylinders: {vin[0].EngineCylinders} </div>
+              <div> Displacement CC: {vin[0].DisplacementCC} </div>
+              <div> Fuel Injection Type: {vin[0].FuelInjectionType} </div>
+              <div> Drive Type: {vin[0].DriveType} </div>
+              <div> Doors: {vin[0].Doors} </div>
+              <div> Trim: {vin[0].Trim} </div>
+            </div>
+          ) : (
+              <div></div>
+            )}
+        </Col>
+      </Row>
+
       <Hero backgroundImage={porsche}>
         <img className="cardoclogo" src={logo} alt={"logo"} style={{ height: 120, flex: 1, width: undefined, padding: 0 }} />
         <h2 className="hometitle">For your auto parts and modifications needs.</h2>
       </Hero>
-      <Container>
-        <Row>
-          <Col size="xs-9 md-12">
-            {/* <form> */}
-              <Input
-                onChange={handleInputChange}
-                name="search"
-                placeholder="Search car VIN..."
-              />
-              <FormBtn
-                disabled={!(formObject.search)}
-                onClick={handleFormSubmit}
-              >
-                VIN Search
-              </FormBtn>
-            {/* </form> */}
-          </Col>
-        </Row>
-        <Row>
-          <Col size="xs-12 sm-12">
-            {vin.length ? (
-              <div className="vinReturn">
-                <h2>Car VIN Details </h2>
-                <div> VIN: {vin[0].VIN} </div>
-                <div> Make: {vin[0].Make} </div>
-                <div> Model: {vin[0].Model} </div>
-                <div> Model Year: {vin[0].ModelYear} </div>
-                <div> Engine HP: {vin[0].EngineHP} </div>
-                <div> Engine Cylinders: {vin[0].EngineCylinders} </div>
-                <div> Displacement CC: {vin[0].DisplacementCC} </div>
-                <div> Fuel Injection Type: {vin[0].FuelInjectionType} </div>
-                <div> Drive Type: {vin[0].DriveType} </div>
-                <div> Doors: {vin[0].Doors} </div>
-                <div> Trim: {vin[0].Trim} </div>
-              </div>
-            ) : (
-                <h3>No Results to Display</h3>
-              )}
-          </Col>
 
-        </Row>
-      </Container>
-
-      {userData.user ? (
-        <h1>Welcome {userData.user.displayName}
-          <Clock /> </h1>
-      ) : (
-          <>
-            <h2>Welcome to CarDoc!  <br></br>Please
-          <Link to="/login"> Log in</Link></h2>
-            <Clock />
-          </>
-        )}
     </div>
+
   );
 }

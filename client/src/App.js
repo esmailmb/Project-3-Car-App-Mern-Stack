@@ -7,6 +7,8 @@ import Register from "./components/auth/Register";
 import UserContext from "./context/UserContext";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
+import carvin from "./pages/carvin";
+// import parts from "./pages/parts";
 
 import "./App.css";
 
@@ -51,6 +53,8 @@ export default function App() {
           <div className="container">
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/carvin" component={carvin} />
+              {/* <Route exact path="/parts" component={parts} /> */}
               <Route exact path="/login" component={Login} />
               <Route exact path="/register" component={Register} />
             </Switch>
