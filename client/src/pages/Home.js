@@ -56,6 +56,9 @@ export default function Home() {
   }
   return (
     <div className="page">
+      <Hero backgroundImage={porsche}>
+        <img className="cardoclogo" src={logo} alt={"logo"} style={{ height: 120, flex: 1, width: undefined, padding: 0 }} />
+        <h2 className="hometitle">For your auto parts and modifications needs.</h2>
       {userData.user ? (
         <div className="userCheck">
           <h1>Welcome {userData.user.displayName} <Clock /> </h1>
@@ -80,12 +83,13 @@ export default function Home() {
                   />
                 </Col>
                 <Col size="xs-7 sm-9">
-                  <Button style={{ fontsize: 20, padding:  60, borderradius: 5, borderWidth: 1, margin: 10, }}
+                  <button style={{ fontsize: 10, padding:  20, borderradius: 5, borderWidth: 1, margin: 5, backgroundColor: 'white', }}
                     disabled={!(formObject.search)}
                     onClick={handleFormSubmit}
+                    type="light"
                   >
                     VIN Search
-                  </Button>
+                  </button>
                 </Col>
               </Row>
             </Container>
@@ -115,11 +119,11 @@ export default function Home() {
             )}
         </Col>
       </Row>
-
-      <Hero backgroundImage={porsche}>
+      </Hero>
+     {/* <Hero backgroundImage={porsche}>
         <img className="cardoclogo" src={logo} alt={"logo"} style={{ height: 120, flex: 1, width: undefined, padding: 0 }} />
         <h2 className="hometitle">For your auto parts and modifications needs.</h2>
-      </Hero>
+      </Hero> */}
 
     </div>
 
