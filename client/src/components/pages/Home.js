@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="page">
 
-      <Hero backgroundImage={porsche}>
+      <Hero>
         <img className="cardoclogo" src={logo} alt={"logo"} style={{ height: 140, flex: 1, width: undefined, padding: 0 }} />
         <h2 className="hometitle">For your auto parts and modifications needs.</h2>
 
